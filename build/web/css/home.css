@@ -1,0 +1,49 @@
+/*BODY CSS*/
+/*1st-section*/
+.body {
+    background-color: #fff;
+
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.introduction {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 3px dotted rgba(0,0,0,.2);
+    margin-bottom: 35px;
+}
+
+.intro__content {
+    padding-left: 15px;
+}
+.intro__link{
+    text-decoration: none;
+    color: #000;
+}
+/*------------------------------------*/
+
+/*2nd section*/
+.list-cake{
+    display: flex;
+    border-bottom: 3px dotted rgba(0,0,0,.2);
+}
+
+.cake:last-child{
+    margin-left: auto;
+}
+
+.cake__link{
+    text-decoration: none;
+    color: #000;
+}
+/*------------------------------------*/
+
+/*3th section*/
+.visit-cafe__info{
+    margin-bottom: 11px;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/MariaCafe">
+  <Environment name="connectionURL" type="java.lang.String" value="jdbc:sqlserver://localhost:1433;databaseName=MariaCafe"/>
+  <Environment name="databaseUsername" type="java.lang.String" value="sa"/>
+  <Environment name="databasePassword" type="java.lang.String" value="123456"/>
+  <Environment name="photoPath" type="java.lang.String" value="image/"/>
+</Context>

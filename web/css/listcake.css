@@ -1,0 +1,45 @@
+/*BODY CSS*/
+.list-heading{
+    padding: 5px 0;
+}
+.list-cake{
+    padding: 10px 0;
+    border-bottom: 3px dotted rgba(0,0,0,.2);
+    margin-bottom: 30px;
+}
+.list-cake__content{
+    display: flex;
+}
+.list-cake__description{
+    padding-right: 20px;
+}
+.list-cake__link{
+    text-decoration: none;
+    color: #000;
+}
+
+/*----------------------------------------------------*/
+/******** PAGINATION CSS ********/
+/*----------------------------------------------------*/
+.pagination {
+    font-size: 12px;
+    padding-bottom: 50px;
+}
+
+.pagination__link {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination--active {
+    background-color: #f68c1f;
+    color: #000;
+    border-radius: 50%;
+}
+
+.pagination__link:hover:not(.pagination--active){
+    background-color: #ddd;
+    border-radius: 50%;
+}

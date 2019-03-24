@@ -1,0 +1,24 @@
+/*BODY CSS*/
+.left-side{
+    padding-top: 10px;
+    padding-bottom: 35px;
+}
+
+.content-container{
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 3px dotted rgba(0,0,0,.2);
+ }
+.tel-email{
+    display: flex;
+}
+
+.tel-email__heading{
+    width: 25%;
+}
+
+.tel-email__data{
+     width: 75%;
+}
