@@ -17,6 +17,11 @@ public class MSSQLConnection {
     /**
      * Get data about database from context.xml
      */
+    
+    static{
+        initConfig();
+    }
+    
     public static void initConfig() {
         try {
             InitialContext initialContext = new InitialContext();
@@ -37,7 +42,6 @@ public class MSSQLConnection {
      */
     public static Connection getConnection() throws Exception {
         try {
-            initConfig();
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             con = DriverManager.getConnection(connectionURL, databaseUsername, databasePassword);
         } catch (Exception e) {

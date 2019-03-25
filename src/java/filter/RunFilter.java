@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter(urlPatterns = {"/homepage.jsp","/listCake.jsp","/location.jsp"})
+@WebFilter(urlPatterns = {"/*"})
 public class RunFilter implements Filter{
 
     @Override
@@ -21,12 +21,26 @@ public class RunFilter implements Filter{
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest httpRequest = (HttpServletRequest) request;
-        HttpServletResponse httpResponse = (HttpServletResponse) response;
-        String servletPath = httpRequest.getServletPath();
-        if(servletPath.contains("homepage.jsp")) httpResponse.sendRedirect("homeController");
-        if(servletPath.contains("listCake.jsp")) httpResponse.sendRedirect("menuController");
-        if(servletPath.contains("location.jsp")) httpResponse.sendRedirect("findUsController");
+        try {
+            HttpServletRequest httpRequest = (HttpServletRequest) request;
+            HttpServletResponse httpResponse = (HttpServletResponse) response;
+            String servletPath = httpRequest.getServletPath();
+            System.out.println(servletPath);
+            if (servletPath.endsWith(".jsp")) {
+
+                if (servletPath.contains("listCake.jsp")) {
+                    httpResponse.sendRedirect("aboutController");
+                } else if (servletPath.contains("location.jsp")) {
+                    httpResponse.sendRedirect("findControler");
+                } else {
+                    httpResponse.sendRedirect("homeController");
+                }
+            }else{
+                chain.doFilter(request, response);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
